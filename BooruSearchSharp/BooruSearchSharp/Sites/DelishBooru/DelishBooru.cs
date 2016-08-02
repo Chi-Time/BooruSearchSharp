@@ -57,7 +57,7 @@ namespace BooruSearchSharp
 
         string Search (string searchTerm)
         {
-            string url = "https://lolibooru.moe/";
+            string url = "https://delishbooru.com/";
             string api = "post.json?tags={0}";
 
             string parsedURL = string.Format (url + api, searchTerm);

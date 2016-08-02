@@ -42,31 +42,35 @@
     <Compile Include="ImageInfo.cs" />
     <Compile Include="Post.cs" />
     <Compile Include="Search.cs" />
-    <Compile Include="SearchBooru\SBImage.cs" />
-    <Compile Include="SearchBooru\SBImageInfo.cs" />
-    <Compile Include="SearchBooru\SearchBooru.cs" />
-    <Compile Include="DanBooru\DanBooru.cs" />
-    <Compile Include="DanBooru\DBImageInfo.cs" />
-    <Compile Include="Yande_Re\Yandere.cs" />
-    <Compile Include="Yande_Re\YDImageInfo.cs" />
-    <Compile Include="Konachan\Konachan.cs" />
-    <Compile Include="Konachan\KCImageInfo.cs" />
-    <Compile Include="Lolibooru\Lolibooru.cs" />
-    <Compile Include="Lolibooru\LBImageInfo.cs" />
-    <Compile Include="DelishBooru\DelishBooru.cs" />
-    <Compile Include="DelishBooru\DLBImageInfo.cs" />
+    <Compile Include="Sites\DanBooru\DanBooru.cs" />
+    <Compile Include="Sites\DanBooru\DBImageInfo.cs" />
+    <Compile Include="Sites\DelishBooru\DelishBooru.cs" />
+    <Compile Include="Sites\DelishBooru\DLBImageInfo.cs" />
+    <Compile Include="Sites\E621\E621.cs" />
+    <Compile Include="Sites\E621\EImageInfo.cs" />
+    <Compile Include="Sites\Konachan\KCImageInfo.cs" />
+    <Compile Include="Sites\Konachan\Konachan.cs" />
+    <Compile Include="Sites\Lolibooru\LBImageInfo.cs" />
+    <Compile Include="Sites\Lolibooru\Lolibooru.cs" />
+    <Compile Include="Sites\SearchBooru\SBImage.cs" />
+    <Compile Include="Sites\SearchBooru\SBImageInfo.cs" />
+    <Compile Include="Sites\SearchBooru\SearchBooru.cs" />
+    <Compile Include="Sites\Yande_Re\Yandere.cs" />
+    <Compile Include="Sites\Yande_Re\YDImageInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="SearchBooru\" />
-    <Folder Include="DanBooru\" />
-    <Folder Include="Yande_Re\" />
-    <Folder Include="Konachan\" />
-    <Folder Include="Lolibooru\" />
-    <Folder Include="DelishBooru\" />
+    <Folder Include="Sites\" />
+    <Folder Include="Sites\DanBooru\" />
+    <Folder Include="Sites\DelishBooru\" />
+    <Folder Include="Sites\E621\" />
+    <Folder Include="Sites\Konachan\" />
+    <Folder Include="Sites\Lolibooru\" />
+    <Folder Include="Sites\SearchBooru\" />
+    <Folder Include="Sites\Yande_Re\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
