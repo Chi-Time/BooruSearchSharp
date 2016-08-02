@@ -53,6 +53,8 @@
     <Compile Include="Konachan\KCImageInfo.cs" />
     <Compile Include="Lolibooru\Lolibooru.cs" />
     <Compile Include="Lolibooru\LBImageInfo.cs" />
+    <Compile Include="DelishBooru\DelishBooru.cs" />
+    <Compile Include="DelishBooru\DLBImageInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -64,6 +66,7 @@
     <Folder Include="Yande_Re\" />
     <Folder Include="Konachan\" />
     <Folder Include="Lolibooru\" />
+    <Folder Include="DelishBooru\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
