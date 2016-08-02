@@ -15,13 +15,13 @@ namespace BooruSearchSharp.E621
 
         void Start ()
         {
-            Console.WriteLine ("Welcome to delishbooru image search!\nPlease type the search term. (Leave empty if not wanted.)");
+            Console.WriteLine ("Welcome to E621 image search!\nPlease type the search term. (Leave empty if not wanted.)");
             string term = Console.ReadLine ();
 
             string objectData = RequestURL (Search (term));
 
-            //Console.WriteLine (objectData);
-            //Console.ReadKey ();
+            Console.WriteLine (objectData);
+            Console.ReadKey ();
 
             List<EImageInfo> imLst = JsonConvert.DeserializeObject<List<EImageInfo>> (objectData);
 
@@ -34,12 +34,18 @@ namespace BooruSearchSharp.E621
 
         string RequestURL (string urlRequest)
         {
-            // Create a request for the URL. 
-            WebRequest request = WebRequest.Create (urlRequest);
+            //WebClient client = new WebClient ();
+            //client.Headers.Add ("BooruSearchSharp/1.0 (by username)", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)");
+            //// Create a request for the URL. 
+            //WebRequest request = WebRequest.Create (urlRequest);
+            HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create (urlRequest);
+            myHttpWebRequest.UserAgent = "BooruSearchSharp/0.1.4 (by username on e621)";
             // If required by the server, set the credentials.
-            request.Credentials = CredentialCache.DefaultCredentials;
+            //request.Credentials = CredentialCache.DefaultCredentials;
+            myHttpWebRequest.Credentials = CredentialCache.DefaultCredentials;
             // Get the response.
-            WebResponse response = request.GetResponse ();
+            //WebResponse response = request.GetResponse ();
+            WebResponse response = myHttpWebRequest.GetResponse ();
             // Display the status.
             Console.WriteLine (( (HttpWebResponse)response ).StatusDescription);
             // Get the stream containing content returned by the server.
