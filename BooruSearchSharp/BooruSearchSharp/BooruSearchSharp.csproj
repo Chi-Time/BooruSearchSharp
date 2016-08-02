@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{2A2E85A9-045E-41A4-A72C-1E9C9B7CC84E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BooruSearchSharp</RootNamespace>
+    <AssemblyName>BooruSearchSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ImageInfo.cs" />
+    <Compile Include="Post.cs" />
+    <Compile Include="Search.cs" />
+    <Compile Include="SearchBooru\SBImage.cs" />
+    <Compile Include="SearchBooru\SBImageInfo.cs" />
+    <Compile Include="SearchBooru\SearchBooru.cs" />
+    <Compile Include="DanBooru\DanBooru.cs" />
+    <Compile Include="DanBooru\DBImageInfo.cs" />
+    <Compile Include="Yande_Re\Yandere.cs" />
+    <Compile Include="Yande_Re\YDImageInfo.cs" />
+    <Compile Include="Konachan\Konachan.cs" />
+    <Compile Include="Konachan\KCImageInfo.cs" />
+    <Compile Include="Lolibooru\Lolibooru.cs" />
+    <Compile Include="Lolibooru\LBImageInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SearchBooru\" />
+    <Folder Include="DanBooru\" />
+    <Folder Include="Yande_Re\" />
+    <Folder Include="Konachan\" />
+    <Folder Include="Lolibooru\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
