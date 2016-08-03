@@ -57,6 +57,12 @@
     <Compile Include="Sites\SearchBooru\SearchBooru.cs" />
     <Compile Include="Sites\Yande_Re\Yandere.cs" />
     <Compile Include="Sites\Yande_Re\YDImageInfo.cs" />
+    <Compile Include="Sites\UberBooru\UberBooru.cs" />
+    <Compile Include="Sites\UberBooru\UBImageInfo.cs" />
+    <Compile Include="Sites\TheDoujin\TheDoujin.cs" />
+    <Compile Include="Sites\TheDoujin\DoujinInfo.cs" />
+    <Compile Include="Sites\BroniBooru\BroniBooru.cs" />
+    <Compile Include="Sites\BroniBooru\BBImageInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -71,6 +77,9 @@
     <Folder Include="Sites\Lolibooru\" />
     <Folder Include="Sites\SearchBooru\" />
     <Folder Include="Sites\Yande_Re\" />
+    <Folder Include="Sites\UberBooru\" />
+    <Folder Include="Sites\TheDoujin\" />
+    <Folder Include="Sites\BroniBooru\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

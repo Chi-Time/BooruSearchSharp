@@ -4,18 +4,18 @@ using System.Net;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace BooruSearchSharp.DelishBooru
+namespace BooruSearchSharp
 {
-    public class DelishBooru
+    public class TheDoujin
     {
-        public DelishBooru ()
+        public TheDoujin ()
         {
             Start ();
         }
 
         void Start ()
         {
-            Console.WriteLine ("Welcome to delishbooru image search!\nPlease type the search term. (Leave empty if not wanted.)");
+            Console.WriteLine ("Welcome to thedoujin doujin search!\nPlease type the search term. (Leave empty if not wanted.)");
             string term = Console.ReadLine ();
 
             string objectData = RequestURL (Search (term));
@@ -23,11 +23,12 @@ namespace BooruSearchSharp.DelishBooru
             //Console.WriteLine (objectData);
             //Console.ReadKey ();
 
-            List<DLBImageInfo> imLst = JsonConvert.DeserializeObject<List<DLBImageInfo>> (objectData);
+            List<DoujinInfo> imLst = JsonConvert.DeserializeObject<List<DoujinInfo>> (objectData);
 
             for (int i = 0; i < imLst.Count; i++)
             {
-                Console.WriteLine (imLst[i].ID + "\n");
+                Console.WriteLine ( "http://thedoujin.com/index.php/categories/" + imLst[i].Category_ID + "\n");
+                Console.WriteLine (imLst[i].Title + "\n");
                 Console.WriteLine (imLst[i].File_URL + "\n\n");
             }
         }
@@ -57,8 +58,8 @@ namespace BooruSearchSharp.DelishBooru
 
         string Search (string searchTerm)
         {
-            string url = "https://delishbooru.com/";
-            string api = "post.json?tags={0}";
+            string url = "http://thedoujin.com/index.php/api/categories/";
+            string api = "json?tags={0}";
 
             string parsedURL = string.Format (url + api, searchTerm);
 

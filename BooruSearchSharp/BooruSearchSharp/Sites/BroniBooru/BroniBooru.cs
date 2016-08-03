@@ -4,18 +4,20 @@ using System.Net;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace BooruSearchSharp.DelishBooru
+namespace BooruSearchSharp
 {
-    public class DelishBooru
+    public class BroniBooru
     {
-        public DelishBooru ()
+        public BroniBooru ()
         {
             Start ();
         }
 
         void Start ()
         {
-            Console.WriteLine ("Welcome to delishbooru image search!\nPlease type the search term. (Leave empty if not wanted.)");
+            string url = "http://danbooru.donmai.us";
+
+            Console.WriteLine ("Welcome to BroniBooru image search!\nPlease type the search term. (Leave empty if not wanted.)");
             string term = Console.ReadLine ();
 
             string objectData = RequestURL (Search (term));
@@ -23,12 +25,12 @@ namespace BooruSearchSharp.DelishBooru
             //Console.WriteLine (objectData);
             //Console.ReadKey ();
 
-            List<DLBImageInfo> imLst = JsonConvert.DeserializeObject<List<DLBImageInfo>> (objectData);
+            List<BBImageInfo> imLst = JsonConvert.DeserializeObject<List<BBImageInfo>> (objectData);
 
             for (int i = 0; i < imLst.Count; i++)
             {
                 Console.WriteLine (imLst[i].ID + "\n");
-                Console.WriteLine (imLst[i].File_URL + "\n\n");
+                Console.WriteLine (url + imLst[i].File_URL + "\n\n");
             }
         }
 
@@ -57,8 +59,8 @@ namespace BooruSearchSharp.DelishBooru
 
         string Search (string searchTerm)
         {
-            string url = "https://delishbooru.com/";
-            string api = "post.json?tags={0}";
+            string url = "http://www.bronibooru.com/";
+            string api = "/posts.json?tags={0}";
 
             string parsedURL = string.Format (url + api, searchTerm);
 

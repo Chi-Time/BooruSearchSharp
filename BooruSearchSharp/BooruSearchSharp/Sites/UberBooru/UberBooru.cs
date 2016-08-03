@@ -4,18 +4,18 @@ using System.Net;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace BooruSearchSharp.DelishBooru
+namespace BooruSearchSharp.UberBooru
 {
-    public class DelishBooru
+    public class UberBooru
     {
-        public DelishBooru ()
+        public UberBooru ()
         {
-            Start ();
+            Start (); 
         }
 
         void Start ()
         {
-            Console.WriteLine ("Welcome to delishbooru image search!\nPlease type the search term. (Leave empty if not wanted.)");
+            Console.WriteLine ("Welcome to UberBooru image search!\nPlease type the search term. (Leave empty if not wanted.)");
             string term = Console.ReadLine ();
 
             string objectData = RequestURL (Search (term));
@@ -23,7 +23,7 @@ namespace BooruSearchSharp.DelishBooru
             //Console.WriteLine (objectData);
             //Console.ReadKey ();
 
-            List<DLBImageInfo> imLst = JsonConvert.DeserializeObject<List<DLBImageInfo>> (objectData);
+            List<UBImageInfo> imLst = JsonConvert.DeserializeObject<List<UBImageInfo>> (objectData);
 
             for (int i = 0; i < imLst.Count; i++)
             {
@@ -57,8 +57,8 @@ namespace BooruSearchSharp.DelishBooru
 
         string Search (string searchTerm)
         {
-            string url = "https://delishbooru.com/";
-            string api = "post.json?tags={0}";
+            string url = "https://uberbooru.com/";
+            string api = "posts.json?tags={0}";
 
             string parsedURL = string.Format (url + api, searchTerm);
 

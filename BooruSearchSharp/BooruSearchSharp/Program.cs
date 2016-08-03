@@ -19,7 +19,12 @@ namespace BooruSearchSharp
             //var db = new DanBooru.DanBooru ();
             //var yd = new Yandere.Yandere ();
             //var kc = new Konachan.Konachan ();
-            var lb = new Lolibooru.Lolibooru ();
+            //var lb = new Lolibooru.Lolibooru ();
+            //var dlb = new DelishBooru.DelishBooru ();
+            //var e62 = new E621.E621 ();
+            //var ub = new UberBooru.UberBooru ();
+            //var bb = new BroniBooru ();
+            //var td = new TheDoujin ();
 
             Console.ReadKey ();
         }
