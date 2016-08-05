@@ -1,0 +1,7 @@
+Add support for random image results.
+
+Gelbooru 2.0 API = /index.php?page=post&s=random
+
+Make an abstract class for Gelbooru and Danbooru API searching.
+That all images values and information go into a single list of images.
+This will clean up the code base of repeated files that do the same thing for different links.
