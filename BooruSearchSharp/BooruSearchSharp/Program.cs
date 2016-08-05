@@ -32,7 +32,8 @@ namespace BooruSearchSharp
             //var gel = new GelBooru ();
             //var safe = new SafeBooru ();
             //var r34 = new Rule34 ();
-            var fb = new FurryBooru.FurryBooru ();
+            //var fb = new FurryBooru.FurryBooru ();
+            //var xb = new XBooru ();
             Console.ReadKey ();
 
             //XmlDocument doc = new XmlDocument();

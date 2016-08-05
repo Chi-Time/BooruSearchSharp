@@ -75,6 +75,9 @@
     <Compile Include="Sites\FurryBooru\FurryBooru.cs" />
     <Compile Include="Sites\FurryBooru\FBIMageInfo.cs" />
     <Compile Include="Sites\FurryBooru\FBPost.cs" />
+    <Compile Include="Sites\XBooru\XBooru.cs" />
+    <Compile Include="Sites\XBooru\XBImageInfo.cs" />
+    <Compile Include="Sites\XBooru\XBPost.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -96,6 +99,7 @@
     <Folder Include="Sites\SafeBooru\" />
     <Folder Include="Sites\Rule 34\" />
     <Folder Include="Sites\FurryBooru\" />
+    <Folder Include="Sites\XBooru\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
