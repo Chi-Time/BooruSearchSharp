@@ -63,6 +63,8 @@
     <Compile Include="Sites\TheDoujin\DoujinInfo.cs" />
     <Compile Include="Sites\BroniBooru\BroniBooru.cs" />
     <Compile Include="Sites\BroniBooru\BBImageInfo.cs" />
+    <Compile Include="Sites\GelBooru\GelBooru.cs" />
+    <Compile Include="Sites\GelBooru\ImageInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -80,6 +82,7 @@
     <Folder Include="Sites\UberBooru\" />
     <Folder Include="Sites\TheDoujin\" />
     <Folder Include="Sites\BroniBooru\" />
+    <Folder Include="Sites\GelBooru\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

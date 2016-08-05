@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using System.Xml;
 using System.Net;
 using System.Xml.Serialization;
+using BooruSearchSharp.Gel;
 
 namespace BooruSearchSharp
 {
@@ -25,6 +26,34 @@ namespace BooruSearchSharp
             //var ub = new UberBooru.UberBooru ();
             //var bb = new BroniBooru ();
             //var td = new TheDoujin ();
+            var gel = new GelBooru ();
+            Console.ReadKey ();
+
+            //XmlDocument doc = new XmlDocument();
+            //doc.LoadXml (Shit ());
+            //Console.WriteLine (doc.ChildNodes.Item (1).Name);
+            //for (int i = 0; i < doc.ChildNodes.Item (1).ChildNodes.Count; i++)
+            //{
+            //    for (int j = 0; j < doc.ChildNodes.Item (1).ChildNodes.Item (j).Attributes.Count; j++)
+            //    {
+            //        Console.WriteLine (doc.ChildNodes.Item (1).ChildNodes.Item (i).Attributes.Item (j).Name);
+            //    }
+            //}
+            Console.ReadKey ();
+
+            //string json = JsonConvert.SerializeXmlNode (doc,Newtonsoft.Json.Formatting.Indented,true);
+            //Console.WriteLine (json);
+            //Console.ReadKey ();
+
+            //var im = JsonConvert.DeserializeObject<BooruSearchSharp.Gel.ImageInfo> (json);
+            //Console.WriteLine (im.Count);
+            //Console.ReadKey ();
+
+            //XmlSerializer s = new XmlSerializer ((typeof (BooruSearchSharp.Gel.ImageInfo)));
+            //StringReader sreader = new StringReader (Shit ());
+
+            //var p = (BooruSearchSharp.Gel.ImageInfo)s.Deserialize (sreader);
+            //Console.WriteLine (p.Count);
 
             Console.ReadKey ();
         }
@@ -33,7 +62,7 @@ namespace BooruSearchSharp
         {
             // Create a request for the URL. 
             WebRequest request = WebRequest.Create (
-              "http://gelbooru.com/index.php?page=dapi&s=post&q=index&tags=vore");
+              "http://gelbooru.com/index.php?page=dapi&s=post&q=index&tags=hair");
             // If required by the server, set the credentials.
             request.Credentials = CredentialCache.DefaultCredentials;
             // Get the response.
