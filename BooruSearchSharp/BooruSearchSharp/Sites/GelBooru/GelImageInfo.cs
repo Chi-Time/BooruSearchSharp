@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 namespace BooruSearchSharp.Gel
 {
-    public class ImageInfo
+    public class GelImageInfo
     {
         public int Count { get; set; }
         public int Offset { get; set; }
-        public List<Post> Posts = new List<Post> ();
+        public List<GelPost> Posts = new List<GelPost> ();
         private XmlDocument _Document;
 
-        public ImageInfo (XmlDocument doc)
+        public GelImageInfo (XmlDocument doc)
         {
             _Document = doc;
             GenerateImageInformation ();
@@ -32,9 +32,9 @@ namespace BooruSearchSharp.Gel
             }
         }
 
-        Post CreatePost (int iterator)
+        GelPost CreatePost (int iterator)
         {
-            return new Post {
+            return new GelPost {
                 Height = int.Parse (GetElement (iterator, 0)),
                 Score = int.Parse (GetElement (iterator, 1)),
                 File_URL = GetElement (iterator, 2),

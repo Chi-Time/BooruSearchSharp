@@ -2,8 +2,6 @@
 using System.IO;
 using System.Net;
 using System.Xml;
-using Newtonsoft.Json;
-using System.Xml.Serialization;
 using System.Collections.Generic;
 
 namespace BooruSearchSharp.Gel
@@ -17,14 +15,14 @@ namespace BooruSearchSharp.Gel
 
         void Start ()
         {
-            var lstImages = new List<ImageInfo> ();
+            var lstImages = new List<GelImageInfo> ();
             
             Console.WriteLine ("Welcome to Gelbooru search!\nPlease type the search term. (Leave empty if not wanted.)");
             string term = Console.ReadLine ();
 
             var document = new XmlDocument ();
             document.LoadXml (RequestURLData (SearchTags (term)));
-            var im = new ImageInfo (document);
+            var im = new GelImageInfo (document);
 
             for (int i = 0; i < im.Posts.Count; i++)
             {

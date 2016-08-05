@@ -1,7 +1,6 @@
-﻿using System;
-namespace BooruSearchSharp.Gel
+﻿namespace BooruSearchSharp.Gel
 {
-    public class Post
+    public class GelPost
     {
         public int Height { get; set; }
         public int Score { get; set; }
