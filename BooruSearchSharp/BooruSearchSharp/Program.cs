@@ -35,59 +35,6 @@ namespace BooruSearchSharp
             //var fb = new FurryBooru.FurryBooru ();
             //var xb = new XBooru ();
             Console.ReadKey ();
-
-            //XmlDocument doc = new XmlDocument();
-            //doc.LoadXml (Shit ());
-            //Console.WriteLine (doc.ChildNodes.Item (1).Name);
-            //for (int i = 0; i < doc.ChildNodes.Item (1).ChildNodes.Count; i++)
-            //{
-            //    for (int j = 0; j < doc.ChildNodes.Item (1).ChildNodes.Item (j).Attributes.Count; j++)
-            //    {
-            //        Console.WriteLine (doc.ChildNodes.Item (1).ChildNodes.Item (i).Attributes.Item (j).Name);
-            //    }
-            //}
-            Console.ReadKey ();
-
-            //string json = JsonConvert.SerializeXmlNode (doc,Newtonsoft.Json.Formatting.Indented,true);
-            //Console.WriteLine (json);
-            //Console.ReadKey ();
-
-            //var im = JsonConvert.DeserializeObject<BooruSearchSharp.Gel.ImageInfo> (json);
-            //Console.WriteLine (im.Count);
-            //Console.ReadKey ();
-
-            //XmlSerializer s = new XmlSerializer ((typeof (BooruSearchSharp.Gel.ImageInfo)));
-            //StringReader sreader = new StringReader (Shit ());
-
-            //var p = (BooruSearchSharp.Gel.ImageInfo)s.Deserialize (sreader);
-            //Console.WriteLine (p.Count);
-
-            Console.ReadKey ();
-        }
-
-        string Shit ()
-        {
-            // Create a request for the URL. 
-            WebRequest request = WebRequest.Create (
-              "http://gelbooru.com/index.php?page=dapi&s=post&q=index&tags=hair");
-            // If required by the server, set the credentials.
-            request.Credentials = CredentialCache.DefaultCredentials;
-            // Get the response.
-            WebResponse response = request.GetResponse ();
-            // Display the status.
-            Console.WriteLine (( (HttpWebResponse)response ).StatusDescription);
-            // Get the stream containing content returned by the server.
-            Stream dataStream = response.GetResponseStream ();
-            // Open the stream using a StreamReader for easy access.
-            StreamReader reader = new StreamReader (dataStream);
-            // Read the content.
-            string responseFromServer = reader.ReadToEnd ();
-            // Display the content.
-            //Console.WriteLine (responseFromServer);
-            // Clean up the streams and the response.
-            reader.Close ();
-            response.Close ();
-            return responseFromServer;
         }
     }
 }
