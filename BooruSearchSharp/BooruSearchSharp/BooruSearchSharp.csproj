@@ -64,14 +64,17 @@
     <Compile Include="Sites\BroniBooru\BroniBooru.cs" />
     <Compile Include="Sites\BroniBooru\BBImageInfo.cs" />
     <Compile Include="Sites\GelBooru\GelBooru.cs" />
-    <Compile Include="Sites\GelBooru\ImageInfo.cs" />
-    <Compile Include="Sites\GelBooru\Post.cs" />
+    <Compile Include="Sites\GelBooru\GelImageInfo.cs" />
+    <Compile Include="Sites\GelBooru\GelPost.cs" />
     <Compile Include="Sites\SafeBooru\SafeBooru.cs" />
     <Compile Include="Sites\SafeBooru\SFImageInfo.cs" />
     <Compile Include="Sites\SafeBooru\SFPost.cs" />
     <Compile Include="Sites\Rule 34\Rule34.cs" />
     <Compile Include="Sites\Rule 34\R34ImageInfo.cs" />
     <Compile Include="Sites\Rule 34\R34Post.cs" />
+    <Compile Include="Sites\FurryBooru\FurryBooru.cs" />
+    <Compile Include="Sites\FurryBooru\FBIMageInfo.cs" />
+    <Compile Include="Sites\FurryBooru\FBPost.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -92,6 +95,7 @@
     <Folder Include="Sites\GelBooru\" />
     <Folder Include="Sites\SafeBooru\" />
     <Folder Include="Sites\Rule 34\" />
+    <Folder Include="Sites\FurryBooru\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
