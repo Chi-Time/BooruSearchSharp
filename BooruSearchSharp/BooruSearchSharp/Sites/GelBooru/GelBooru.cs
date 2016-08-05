@@ -24,23 +24,13 @@ namespace BooruSearchSharp.Gel
 
             var document = new XmlDocument ();
             document.LoadXml (RequestURLData (SearchTags (term)));
-            Console.WriteLine (SearchTags (term));
-            Console.ReadKey ();
             var im = new ImageInfo (document);
-            Console.WriteLine (im.Posts[0].ID);
-            Console.WriteLine (im.Posts[0].File_URL);
-            //Console.WriteLine (document.ChildNodes.Item (1).Name);
-            //string json = JsonConvert.SerializeXmlNode (document.ChildNodes.Item (1), Newtonsoft.Json.Formatting.Indented);
-            //string word = "";
-            //using (StreamWriter sw = File.CreateText ("gel.json"))
-            //{
-            //    sw.Write (json);
-            //}
-            //Console.WriteLine (word);
-            //Console.ReadKey ();
-            //var im = JsonConvert.DeserializeObject<ImageInfo> (json);
-            //Console.WriteLine (im.Posts.Count);
-            //Console.WriteLine (document.ChildNodes.Item (1).Attributes.Item (0).Value);
+
+            for (int i = 0; i < im.Posts.Count; i++)
+            {
+                Console.WriteLine (im.Posts[i].ID);
+                Console.WriteLine (im.Posts[i].File_URL);
+            }
         }
 
         string RequestURLData (string urlRequest)

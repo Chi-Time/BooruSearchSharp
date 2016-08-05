@@ -65,6 +65,7 @@
     <Compile Include="Sites\BroniBooru\BBImageInfo.cs" />
     <Compile Include="Sites\GelBooru\GelBooru.cs" />
     <Compile Include="Sites\GelBooru\ImageInfo.cs" />
+    <Compile Include="Sites\GelBooru\Post.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
