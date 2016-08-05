@@ -66,6 +66,12 @@
     <Compile Include="Sites\GelBooru\GelBooru.cs" />
     <Compile Include="Sites\GelBooru\ImageInfo.cs" />
     <Compile Include="Sites\GelBooru\Post.cs" />
+    <Compile Include="Sites\SafeBooru\SafeBooru.cs" />
+    <Compile Include="Sites\SafeBooru\SFImageInfo.cs" />
+    <Compile Include="Sites\SafeBooru\SFPost.cs" />
+    <Compile Include="Sites\Rule 34\Rule34.cs" />
+    <Compile Include="Sites\Rule 34\R34ImageInfo.cs" />
+    <Compile Include="Sites\Rule 34\R34Post.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -84,6 +90,8 @@
     <Folder Include="Sites\TheDoujin\" />
     <Folder Include="Sites\BroniBooru\" />
     <Folder Include="Sites\GelBooru\" />
+    <Folder Include="Sites\SafeBooru\" />
+    <Folder Include="Sites\Rule 34\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

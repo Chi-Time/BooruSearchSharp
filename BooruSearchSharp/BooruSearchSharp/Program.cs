@@ -6,6 +6,7 @@ using System.Xml;
 using System.Net;
 using System.Xml.Serialization;
 using BooruSearchSharp.Gel;
+using BooruSearchSharp.R34;
 using BooruSearchSharp.Safebooru;
 
 namespace BooruSearchSharp
@@ -28,7 +29,8 @@ namespace BooruSearchSharp
             //var bb = new BroniBooru ();
             //var td = new TheDoujin ();
             //var gel = new GelBooru ();
-            var safe = new SafeBooru ();
+            //var safe = new SafeBooru ();
+            var r34 = new Rule34 ();
             Console.ReadKey ();
 
             //XmlDocument doc = new XmlDocument();
